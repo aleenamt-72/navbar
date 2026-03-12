@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><h1>BOOKS</h1></div>
+        <ul class="items" id="menulist"> 
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+             <li><a href="#">Feedback</a></li>
+        </ul>
+        <div class="icon" id="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <script>
+        var menulist = document.getElementById("menulist")
+        var menuicon=document.getElementById("menu-icon");
+        menuicon.onclick=function(){
+           if(menulist.style.display==="block"){
+            menulist.style.display="none";
+           }
+           else{
+            menulist.style.display="block";
+           }
+        }
+        menuicon.onclick = function(){
+
+        if(menulist.style.display === "flex"){
+           menulist.style.display = "none";
+        }
+        else{
+            menulist.style.display = "flex";
+        }
+        }   
+    </script>
+
+
+    <div class="butncontainer">
+    <button id="openModal" class="openbtn">Open</button>
+    </div>
+    <div id="modal" class="modal">
+    <div class="modalexample">
+        <h2>Modal </h2>
+        <p> simple modal</p>
+        <button class="button">ok</button>
+    </div>
+    </div>
+    
+<script>
+    var modal = document.getElementById("modal");
+    var btn = document.getElementById("openModal");
+    var button = document.querySelector(".button");
+
+btn.onclick = function(){
+modal.style.display = "block";
+}
+
+button.onclick = function(){
+modal.style.display = "none";
+}
+
+window.onclick = function(event){
+if(event.target == modal){
+modal.style.display = "none";
+}
+}
+</script>
+    
+</body>
+</html>
